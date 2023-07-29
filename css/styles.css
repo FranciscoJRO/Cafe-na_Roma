@@ -3,6 +3,7 @@
     --negro:#000000;
     --primario:#FFFCEF;
     --texto:#7F7D77;
+    
 }
 
 
@@ -18,10 +19,12 @@ html{
   }
 
 body{
-   
+    
     font-size: 16px;/*con esos ajustes del html a 62.5% y el body a 16 px  1rem = 10 px*/
+    font-family: 'Elephant', sans-serif;
 }
 
+/* Estilos para el título */
 .titulo {
     color: #7F7D77;
     text-align: center;
@@ -30,9 +33,100 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 481px; /* Ancho */
-    height: 86px; /* Alto */
     flex-shrink: 0; /* Flex-shrink */
     margin: 0 auto; /* Centrar horizontalmente */
+
+    /* Elimina el width y height para que el título se ajuste automáticamente */
 }
 
+/* Estilos responsivos para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 40px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+}
+
+
+
+
+
+/*Navegacion principal*/
+.nav-background{
+    background-color: var(--primario);
+    border-radius: 50px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+    
+
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+
+
+.navegacion-principal a{
+    display:block;
+    text-align: center;
+    color: var(--negro) ;
+    text-decoration: none;
+    font-size:2rem;
+    font-weight: bold;
+    padding : 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--texto);
+    border-radius: 50px;
+    
+    
+}
+
+.Nosotros-titulo{
+        color: #7F7D77;
+        text-align: center;
+        font-family: Elephant;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+
+#Nosotros{
+        width: 734px;
+        height: 446px;
+        border-radius: 95px;
+        background: #FFFCEF;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Dubai;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+@media (max-width: 768px) {
+    .Nosotros-titulo {
+      font-size: 30px; /* Reducimos el tamaño de fuente para títulos en pantallas más pequeñas */
+    }
+
+    #Nosotros {
+      width: 100%; /* Hacemos que el ancho del elemento sea 100% para ocupar todo el ancho de la pantalla */
+      height: auto; /* Permite que la altura se ajuste automáticamente según el contenido */
+      border-radius: 50px; /* Reducimos el radio del borde para que se vea más redondeado */
+      padding: 20px; /* Agregamos espacio interno para mejorar la legibilidad del contenido */
+      font-size: 16px; /* Reducimos el tamaño de fuente para el contenido en pantallas más pequeñas */
+    }
+  }
