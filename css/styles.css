@@ -35,6 +35,7 @@ body{
     line-height: normal;
     flex-shrink: 0; /* Flex-shrink */
     margin: 0 auto; /* Centrar horizontalmente */
+    padding-bottom: 20px;
 
     /* Elimina el width y height para que el título se ajuste automáticamente */
 }
@@ -45,10 +46,6 @@ body{
         font-size: 40px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
     }
 }
-
-
-
-
 
 /*Navegacion principal*/
 .nav-background{
@@ -92,41 +89,373 @@ body{
     
 }
 
-.Nosotros-titulo{
-        color: #7F7D77;
-        text-align: center;
-        font-family: Elephant;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+.Nosotros-titulo {
+  color: #7F7D77;
+  text-align: center;
+  font-family: Elephant;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-#Nosotros{
-        width: 734px;
-        height: 446px;
-        border-radius: 95px;
-        background: #FFFCEF;
-        flex-shrink: 0;
-        color: #000;
-        font-family: Dubai;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
+#Nosotros {
+  width: 734px;
+  height: 446px;
+  border-radius: 95px;
+  background: #FFFCEF;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Dubai;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: grid; 
+  /* Otras propiedades de layout necesarias para ajustar el contenido del texto */
+}
 
 @media (max-width: 768px) {
-    .Nosotros-titulo {
-      font-size: 30px; /* Reducimos el tamaño de fuente para títulos en pantallas más pequeñas */
-    }
-
-    #Nosotros {
-      width: 100%; /* Hacemos que el ancho del elemento sea 100% para ocupar todo el ancho de la pantalla */
-      height: auto; /* Permite que la altura se ajuste automáticamente según el contenido */
-      border-radius: 50px; /* Reducimos el radio del borde para que se vea más redondeado */
-      padding: 20px; /* Agregamos espacio interno para mejorar la legibilidad del contenido */
-      font-size: 16px; /* Reducimos el tamaño de fuente para el contenido en pantallas más pequeñas */
-    }
+  .Nosotros-titulo {
+    font-size: 30px;
   }
+
+  #Nosotros {
+    width: 90%;
+    height: auto;
+    border-radius: 50px;
+    padding: 30px;
+    font-size: 16px;
+  }
+
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+ /* Estilos base para todos los tamaños de pantalla */
+.contenedor-vaso {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+  position: relative;
+}
+
+.vaso {
+  width: 367px;
+  height: 377px;
+  transform: rotate(-0.495deg);
+  position: absolute;
+  top: 60px;
+  right: 100px;
+}
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width: 1230px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
+  .contenedor-vaso {
+    grid-template-columns: 100%; /* Cambiar a una sola columna */
+    justify-content: center; /* Centrar el contenido en el contenedor */
+    
+  }
+  
+  .vaso {
+    visibility: hidden;/*Oculta la imagen del vaso*/
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    left: 0; /* Centrar horizontalmente */
+    margin: 20px auto; /* Agregar margen para espaciar del borde */
+  }
+}
+
+
+
+.contenedor-ubicacion{
+  width: 527px;
+  height: 351px;
+  flex-shrink: 0;
+  border-radius: 95px;
+  background: #FFFCEF;
+  margin-top: 50px;
+    
+}
+
+
+.contenedor-ubicacion p {
+  display: flex;
+  width: 326px;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Elephant;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px;
+}
+
+
+.contenedor-ubicacion h2 {
+  width: 280px;
+  height: 77px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 1px solid #000;
+  background: #FFFCEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  color: #7F7D77;
+  font-family: Elephant;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: 0 auto; /* Centrar horizontalmente */
+  cursor: pointer;
+}
+
+.u{
+  width: 500px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
+  .contenedor-ubicacion {
+    width: 100%;
+    height: auto;
+    margin-left: 0; /* Eliminar el margen izquierdo */
+  }
+  
+  .contenedor-ubicacion p {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contenedor-ubicacion h2 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .u {
+    width: auto;
+    height: auto;
+    margin-left: 40%;
+  }
+}
+
+
+.contenedor-menú {
+  width: 558px;
+  height: 355px;
+  border-radius: 95px;
+  background: #FFFCEF;
+  flex-shrink: 0;
+  margin-top: 50px;
+  padding-bottom: 15px;
+  margin-left: 60%; /* Ajusta este valor para mover el contenedor-menú a la derecha */
+}
+
+.contenedor-menú p {
+  display: flex;
+  width: 326px;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Elephant;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 15px;
+}
+
+.contenedor-menú h2 {
+  width: 280px;
+  height: 77px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 1px solid #000;
+  background: #FFFCEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  color: #7F7D77;
+  font-family: Elephant;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: 0 auto; /* Centrar horizontalmente */
+  cursor: pointer;
+}
+
+.v {
+  width: 500px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
+  .contenedor-menú {
+    width: 100%;
+    height: auto;
+    margin-left: 0; /* Eliminar el margen izquierdo */
+  }
+  
+  .contenedor-menú p {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contenedor-menú h2 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .v {
+    width: auto;
+    height: auto;
+    margin-left: 40%;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos al extremo izquierdo y derecho */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.flores{
+  width: 460px;
+  height: 780px;
+  background: url(../Imagenes/Flores.png);
+  flex-shrink: 0;
+}
+
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
+  .flores {
+    display: none; /* Ocultar la imagen de vaso */
+  }
+}
+
+.contorno-contacto {
+  width: 600px;
+  height: 700px;
+  border-radius: 95px;
+  background: #FFFCEF;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column; /* Cambio a dirección de columna */
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contorno-contacto {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+.titulo-contacto {
+  color: #7F7D77;
+  text-align: center;
+  font-family: Elephant;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  width: 308px;
+  height: 68px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: auto;
+}
+
+.Facebook,
+.whatsapp,
+.instagram {
+  display: flex;
+  width: 331px;
+  height: 79px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Elephant;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.Facebook a,
+.whatsapp a,
+.instagram a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: auto;
+  border-radius: 60px;
+  border: 1px solid #000;
+  width: 331px;
+  height: 79px;
+  flex-shrink: 0;
+}
+  
+.Facebook svg,
+.whatsapp svg,
+.instagram svg {
+  width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 100px;
+  flex-shrink: 0;
+  margin: auto;
+   /* Espacio entre enlace e imagen */
+}
+  
+
+  
