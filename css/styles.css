@@ -22,6 +22,7 @@ body{
     
     font-size: 16px;/*con esos ajustes del html a 62.5% y el body a 16 px  1rem = 10 px*/
     font-family: 'Elephant', sans-serif;
+    background-color:  #FFFCEF;
 }
 
 /* Estilos para el título */
@@ -61,6 +62,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 @media (min-width: 768px) {
@@ -77,9 +79,9 @@ body{
     text-align: center;
     color: var(--negro) ;
     text-decoration: none;
-    font-size:2rem;
+    font-size:2.5rem;
     font-weight: bold;
-    padding : 1rem;
+    padding : 2rem;
 }
 
 .navegacion-principal a:hover{
@@ -113,6 +115,7 @@ body{
   line-height: normal;
   display: grid; 
   /* Otras propiedades de layout necesarias para ajustar el contenido del texto */
+  border: 2px groove #7F7D77
 }
 
 @media (max-width: 768px) {
@@ -121,11 +124,12 @@ body{
   }
 
   #Nosotros {
-    width: 90%;
+    width: 85%;
     height: auto;
     border-radius: 50px;
     padding: 30px;
     font-size: 16px;
+    
   }
 
 
@@ -148,6 +152,7 @@ body{
   width: 367px;
   height: 377px;
   transform: rotate(-0.495deg);
+  background: url(../Imagenes/vaso.png);
   position: absolute;
   top: 60px;
   right: 100px;
@@ -183,6 +188,7 @@ body{
   background: #FFFCEF;
   margin-top: 50px;
   margin-right: 200px;
+  border: 2px groove #7F7D77
     
 }
 
@@ -247,22 +253,22 @@ body{
   }
   
   .contenedor-ubicacion p {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   
   .contenedor-ubicacion h2 {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   
   .u {
     width: auto;
     height: auto;
-    margin-left: 40%;
-  }
+    align-items: center;
+    margin-left: 33%;
 }
-
+}
 
 .contenedor-menú {
   width: 558px;
@@ -272,13 +278,15 @@ body{
   flex-shrink: 0;
   margin-top: 50px;
   padding-bottom: 15px;
-  margin-left: 60%; /* Ajusta este valor para mover el contenedor-menú a la derecha */
-  margin-right: 50px;
+  margin-left: 57%; /* Ajusta este valor para mover el contenedor-menú a la derecha */
+
+  border: 2px groove #7F7D77
+
 }
 
 .contenedor-menú p {
   display: flex;
-  width: 326px;
+  width: 320px;
   height: 60px;
   flex-direction: column;
   justify-content: center;
@@ -332,22 +340,23 @@ body{
     width: 100%;
     height: auto;
     margin-left: 0; /* Eliminar el margen izquierdo */
+    margin-bottom: 40px;
   }
   
   .contenedor-menú p {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   
   .contenedor-menú h2 {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   
   .v {
     width: auto;
     height: auto;
-    margin-left: 40%;
+    margin-left: 37%;
   }
 }
 
@@ -384,6 +393,8 @@ body{
   justify-content: center;
   align-items: center;
   margin-right: 50px;
+  border: 2px groove #7F7D77
+  
 }
 
 @media (max-width: 768px) {
@@ -391,9 +402,10 @@ body{
     width: 80%;
     max-width: 600px;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     padding: 20px;
   }
+
 }
 
 .titulo-contacto {
@@ -417,7 +429,7 @@ body{
 .whatsapp,
 .instagram {
   display: flex;
-  width: 331px;
+  width: 270px;
   height: 79px;
   flex-direction: column;
   justify-content: center;
@@ -445,8 +457,6 @@ body{
   margin-bottom: auto;
   border-radius: 60px;
   border: 1px solid #000;
-  width: 331px;
-  height: 79px;
   flex-shrink: 0;
 }
   
@@ -461,12 +471,28 @@ body{
 }
 
 .contorno-promociones {
-  width: 1250px;
-  height: 809px;
-  border-radius: 95px;
-  background: #FFFCEF;
+  max-width: 90%;
+  width: 90%;
+  height: auto;
+  border-radius: 10%;
+  background: #FFFCEF; /* Establecemos el fondo de color */
   flex-shrink: 0;
-  margin: 40px auto 40px auto;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #7F7D77;
+}
+
+@media (max-width: 768px) {
+  .contorno-promociones {
+    border-radius: 20px;
+    margin: 10px auto 40px auto;
+    padding: 10px;
+  }
+
+  /* Ocultar .cafecin en pantallas pequeñas */
+  .cafecin {
+    display: none;
+  }
 }
 
 .cafecin {
@@ -488,7 +514,7 @@ body{
   flex-shrink: 0;
   color: #7F7D77;
   font-family: Elephant;
-  font-size: 50px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -496,7 +522,141 @@ body{
   margin-left: 40%;
 }
 
+/* Ajustar .titulo-promociones para pantallas pequeñas */
+@media (max-width: 768px) {
+  .titulo-promociones {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+
+
 .Desayunos {
+  width: 591px;
+  height: 529px;
+  flex-shrink: 0;
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  float: right;
+  margin-top: auto;
+  margin-left: 40px; /* Ajustamos el margen izquierdo a 40px */
+  text-align: center; /* Centramos el contenido */
+}
+
+.Desayunos h2 {
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  float: right;
+  margin-right: 40%; /* Ajustamos el margen superior según sea necesario */
+  display: flex;
+  text-align: center;
+}
+
+.Desayunos h3 {
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  clear: right;
+  margin-top: 10px;
+}
+
+.Desayunos p {
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.Desayunos a {
+  display: block;
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Ajustar .Desayunos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .Desayunos {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Desayunos h2 {
+    margin-right: 150px; /* Ajusta el margen derecho a "auto" para centrar */
+    text-align: center; /* Centrar el título h2 */
+    margin-left: 20px ;
+    margin-right: 40px;
+  }
+
+  .Desayunos h3 {
+    text-align: center;
+  }
+}
+
+
+
+.contorno-promociones2 {
+  max-width: 90%;
+  width: 90%;
+  height: auto;
+  border-radius: 10%;
+  background: #FFFCEF;
+  flex-shrink: 0;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box; /* Asegura que el contorno incluya el padding */
+  border: 2px solid #7F7D77;
+}
+
+.titulo-promociones2{
+  display: flex;
+  width: 379px;
+  height: 104px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #7F7D77;
+  font-family: Elephant;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-left: 40%;
+  
+}
+
+
+.por-la-tarde {
   width: 591px;
   height: 529px;
   flex-shrink: 0;
@@ -508,11 +668,13 @@ body{
   line-height: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   float: right;
-  margin-top: 60px;
-  margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
+  margin-top: auto;
+  margin-left: 40px; /* Ajustamos el margen izquierdo a 40px */
+  text-align: center; /* Centramos el contenido */
+  
 }
 
-.Desayunos h2 {
+.por-la-tarde h2 {
   color: #7F7D77;
   font-family: Inter;
   font-size: 40px;
@@ -520,36 +682,23 @@ body{
   font-weight: 400;
   line-height: normal;
   float: right;
-  margin-right: 40%; /* Ajusta el margen superior según sea necesario */
-  display: flex; /* Agregamos un contenedor flexible para alinear elementos */
-  justify-content: space-between; /* Espaciado entre los elementos flexibles */
+  margin-right: 40%; /* Ajustamos el margen superior según sea necesario */
+  display: flex;
+  text-align: center;
 }
 
-.Desayunos h3 {
+.por-la-tarde h3 {
   color: #7F7D77;
   font-family: Inter;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal; /* Espaciado entre los elementos flexibles */
-  clear: right; /* Añadimos esta propiedad para que el p no flote junto al h2 */
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
-}
-
-.Desayunos p {
-  color: #7F7D77;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  clear: right; /* Añadimos esta propiedad para que el p no flote junto al h2 */
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
-  text-align: left; /* Alineamos el texto a la izquierda */
+  clear: right;
+  margin-top: 10px;
 }
 
-.Desayunos a {
-  display: block;
+.por-la-tarde p {
   color: #7F7D77;
   font-family: Inter;
   font-size: 16px;
@@ -557,6 +706,79 @@ body{
   font-weight: 400;
   line-height: normal;
   margin-top: 10px;
-  float: right; /* Movemos los precios a la derecha */
-  
+  text-align: center;
 }
+
+.por-la-tarde a{
+  display: block;
+  color: #7F7D77;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vino {
+  padding-top: 30px;
+  width: 520px;
+  height: 700px;
+  background: url(../Imagenes/vino.png);
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center 60px; /* Mueve la imagen 60px hacia abajo y la centra horizontalmente */
+  flex-shrink: 0;
+}   
+
+@media (max-width: 768px) {
+  .contorno-promociones2 {
+    border-radius: 20px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  /* Ocultar .vino en pantallas pequeñas */
+  .vino {
+    display: none;
+  }
+
+  .titulo-promociones2 {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .por-la-tarde {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .por-la-tarde h2 {
+    margin-right: auto; /* Ajusta el margen derecho a "auto" para centrar */
+    text-align: center; /* Centrar el título h2 */
+  }
+
+  .por-la-tarde h3 {
+    text-align: center;
+  }
+
+  .por-la-tarde p {
+    text-align: center;
+  }
+
+  .por-la-tarde span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+
+
